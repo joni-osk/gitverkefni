@@ -1,0 +1,176 @@
+/*Gott að hafa í huga:
+1. Útlit á <ul>
+2. Útlit á <li>
+3. Útlit a <a>
+4. Hover virkni á öllum þessum elementum.
+5. Hvernig mobile navið birtist. (Frá toppi, vinstri,botni,hægri - einhverjir transform (CSS3
+Transform fítusar?)*/
+header {
+	background-color: #fff;
+	opacity: 0.97;
+}
+
+.container {
+	max-width: 1170px;
+	width: 100%;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+.row:before, .row:after {
+	content: '';
+	display: table;
+}
+.row:after {
+	clear: both;
+}
+.logo {
+	width: 30%;
+	float: left;
+}
+.logo img {
+	max-width: 200px;
+	height: auto;
+}
+.background {
+	width: 100%;
+	min-width: 600px;
+	margin-top: 110px;
+}
+nav#main-nav {
+	width: 70%;
+	float: left;
+}
+nav#main-nav ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+nav#main-nav ul li a {
+	color: #000;
+	text-decoration: none;
+	padding: 18px;
+	display: block;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	transition: all .3s;
+}
+nav#main-nav ul li a:hover {
+	color: #3498Db;
+}
+div.banner {
+	background-size: cover;
+	background-position: 50% 50%;
+	width: 100%;
+	min-height: 600px;
+}
+.open-menu {
+	color: #fafafa;
+}
+@media all and (max-width: 767px) {
+
+	.hide {
+		display: none !important;
+	}
+	nav#main-nav {
+		position: fixed;
+		top: 74px;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		background-color: #fff;
+		float: none;
+		opacity: 0.9;
+	}
+	nav#main-nav ul {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center; 
+		height: 100%;
+		opacity: 90%;
+	}
+	nav#main-nav ul li a {
+		font-size: 23px;
+		font-weight: 600;
+	}
+
+	header {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+	.open-menu {
+		position: fixed;
+		top: 23px;
+		right: 25px;
+		z-index: 20;
+		width: 35px;
+		height: 35px;
+		display: block;
+	}
+	.open-menu span {
+		display: block;
+    	background-color: #000;
+    	height: 3px;
+	}
+	.open-menu span + span {
+		margin-top: 6px;
+	}
+}
+
+
+
+
+
+
+	/*
+
+
+
+
+
+	.logo {
+		width: 100%;
+		max-width: 150px;
+	}
+	nav#main-nav {
+		position: fixed;
+		top:52px;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		background-color: #fff;
+		float: none;
+	}
+	nav#main-nav ul {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center; 
+		height: 100%;
+	}
+	header {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+	.open-menu {
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		z-index: 20;
+		width: 35px;
+		height: 35px;
+		display: block;
+	}
+	.open-menu span {
+		display: block;
+		background-color: #000;
+		height: 3px;
+	}
+	.open-menu span + span {
+		margin-top: 6px;
+	}
+}
