@@ -6,7 +6,11 @@
 5. Hvernig mobile navið birtist. (Frá toppi, vinstri,botni,hægri - einhverjir transform (CSS3
 Transform fítusar?)*/
 header {
+<<<<<<< HEAD
 	background-color: #fff;
+=======
+	background-color: #b2b2b2;
+>>>>>>> background
 	opacity: 0.97;
 }
 
